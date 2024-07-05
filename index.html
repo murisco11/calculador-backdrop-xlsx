@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  <title>Calculador de Backdrop e Truss</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>CALCULADOR DE BACKDROP E TRUSS</h1>
+
+    <label for="inputEstrutura">Quantas estruturas?</label>
+    <input type="number" name="inputEstrutura" id="inputEstrutura" value="1">
+
+    <label for="inputAltura">Altura (metros)</label>
+    <input type="number" name="inputAltura" id="inputAltura">
+
+    <label for="inputLargura">Largura (metros)</label>
+    <input type="number" name="inputLargura" id="inputLargura">
+
+    <label for="select">Tipo de estrutura</label>
+    <select name="select" id="select">
+      <option value="truss">Truss</option>
+      <option value="backdrop">Backdrop</option>
+    </select>
+
+    <button type="button" onclick="clicou()">CALCULAR</button>
+
+    <p id="resultado"></p>
+
+  </div>
+  <div class="historico">
+    <div class="titulo-button" class="btn-historico">
+      <h2>Histórico</h2>
+      <button type="button" id='limpa-historico' class="btn-historico" onclick="limparHistorico()">LIMPAR
+        HISTÓRICO</button>
+      <button type="button" onclick="baixarHistoricoExcel()">BAIXAR HISTÓRICO</button>
+    </div>
+    <ul class='lista'></ul>
+  </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
